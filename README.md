@@ -11,7 +11,7 @@ DateTimeConverter dateTimeConverter;
 void setup() {
     Serial.begin(9600);
     dateTimeConverter.setDateTime("Sep 30 2023", "18:45:30");
-
+    // dateTimeConverter.setDateTime(__DATE__, __TIME__); // Uncomment to set to compile date and time
     Serial.print(F("Directly Accessed CanPacket: "));
     for(byte i = 0; i < 8; i++) {
         Serial.print(dateTimeConverter.canPacket[i], HEX);
