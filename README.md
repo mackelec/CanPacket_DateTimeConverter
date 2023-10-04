@@ -39,3 +39,10 @@ Here are the primary commands you'd use:
   ```
   converter.setDateTime("Dec 25 2023", "12:34:56");
   ```
+- **Convert to Strings**: If you wish to obtain the date and time in a string format from the CAN packet structure, use the `toStrings` method.
+
+  ```
+  char dateStr[12];
+  char timeStr[9];
+  converter.toStrings(dateStr, timeStr);
+  ```
