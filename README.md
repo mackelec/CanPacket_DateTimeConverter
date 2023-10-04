@@ -23,3 +23,19 @@ The 8-byte CAN packet is structured as follows:
 [7] - Reserved
 
 ```
+The reserved bytes [6] and [7] could be leveraged for future enhancements or to store additional information if needed.
+
+## Key Commands
+
+Here are the primary commands you'd use:
+
+- **Initialization**: When you create an instance of the `CanPacket_DateTimeConverter` class, it automatically sets itself with the compile date and time.
+  
+  ```
+  CanPacket_DateTimeConverter converter;
+```
+- **Set Date-Time Manually**: If you wish to manually set the date and time, use the `setDateTime` method. This becomes useful in scenarios where the compile time isn't of interest.
+
+  ```
+  converter.setDateTime("Dec 25 2023", "12:34:56");
+```
